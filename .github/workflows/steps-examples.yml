@@ -7,15 +7,9 @@ jobs:
   marketplace:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Repo
-        uses: actions/checkout@master
-      - name: Install Dependencies
-        run: npm install
-      - name: Deploy to Codepush
-        uses: NishanthShankar/codepush-action@master
+      - name: Configuração do node
+        uses: actions/setup-node@v4
         with:
-          args: release-react -d Production
-        env:
-          APPCENTER_ACCESS_TOKEN: ${{ secrets.APPCENTER_ACCESS_TOKEN }}
+          node-version: 14
       - name: verification of node version
         run: node --version
