@@ -4,7 +4,7 @@ export default function Home() {
       <div className="z-10 max-w-5xl w-full items-center justify-between font-mono
       text-sm lg:flex">
         <h1> Welcome to the ConchaYOro App </h1>
-        <h2> Developed by Capovila, Garbiel </h2>
+        <h2> Developed by Capovila, Gabriel </h2>
         <p> As a test for his course </p>
       </div>
     </main>
