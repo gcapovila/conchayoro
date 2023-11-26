@@ -6,7 +6,7 @@ on:
 
 jobs:
   build-on-prod:
-    if: "contains(github.event.head_commit.message, '[producao]')"
+    if: "contains(github.event.head_commit.message, 'producao')"
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
@@ -16,7 +16,7 @@ jobs:
         path: index.html
 
   deploy-on-prod:
-    if: "contains(github.event.head_commit.message, '[producao]')"
+    if: "contains(github.event.head_commit.message, 'producao')"
     runs-on: ubuntu-latest
     needs: build-on-prod
     env:
